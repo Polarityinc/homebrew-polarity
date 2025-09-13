@@ -1,8 +1,8 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
-  homepage "https://polarity.dev"
+  homepage "https://polarity.cc"
   url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.1/polarity-macos.tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "ed46b1427e584b8c182d2bb3be82428ef3aca8140fcc43776f7d174bdf1a87be"
   license "MIT"
 
   depends_on "git"
@@ -27,14 +27,15 @@ class Polarity < Formula
       To get started:
         1. Authenticate with Polarity (required for AI features):
            pt auth login
+           pt auth
            
-        2. Initialize a repository:
-           pt repo init
+        2. Create a branch:
+           pt create --ai
            
-        3. Create your first stacked branch:
-           pt create <branch-name>
+        3. Submit your stack:
+           pt submit --stack --ai
       
-      For more information, visit: https://docs.polarity.dev
+      For more information, visit: https://docs.polarity.cc
     EOS
   end
 
