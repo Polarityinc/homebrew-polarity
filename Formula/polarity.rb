@@ -2,14 +2,14 @@ class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.cc"
   url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.2/polarity-macos.tar.gz"
-  sha256 "96120205b64d07dfaabcda41d4395a5392b47b192a21110546bb71a496f5b1a5"
+  sha256 "7b8123417bf82dc12b64917ce7c1b645761f857e9e37e36e426a502bdad68693"
   license "MIT"
 
   depends_on "git"
 
   def install
     # Extract and install the binary
-    bin.install "charcoal-macos" => "pt"
+    bin.install "polarity-macos" => "pt"
     
     # Make sure binary is executable
     chmod 0755, bin/"pt"
