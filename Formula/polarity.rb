@@ -1,33 +1,18 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.dev"
-  url "https://github.com/Polarityinc/Polarity-CLI/archive/v0.0.1.tar.gz"
+  url "https://github.com/Polarityinc/Polarity-CLI/releases/download/v0.0.1/polarity-macos.tar.gz"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
 
-  depends_on "node" => :build
-  depends_on "yarn" => :build
   depends_on "git"
 
   def install
-    system "yarn", "install", "--frozen-lockfile"
-    system "yarn", "build"
+    # Extract and install the binary
+    bin.install "charcoal-macos" => "pt"
     
-    # Install the CLI
-    libexec.install Dir["apps/cli/dist/*"]
-    libexec.install "apps/cli/package.json"
-    
-    # Create wrapper script
-    (bin/"pt").write <<~EOS
-      #!/bin/bash
-      export NODE_ENV="production"
-      exec "#{Formula["node"].opt_bin}/node" "#{libexec}/dist/src/index.js" "$@"
-    EOS
-    
-    # Install shell completions
-    bash_completion.install "completions/pt.bash" => "pt"
-    zsh_completion.install "completions/pt.zsh" => "_pt"
-    fish_completion.install "completions/pt.fish"
+    # Make sure binary is executable
+    chmod 0755, bin/"pt"
   end
 
   def post_install
