@@ -1,8 +1,8 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.cc"
-  url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.10/polarity-macos-v0.0.10.tar.gz"
-  sha256 "5b5915d5ccceac04fc6637e2ab5f79d823189642c5c60d5cbd5b805ddc79c1a8"
+  url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.11/polarity-macos-v0.0.11.tar.gz"
+  sha256 "75aa1f4cae5f4ef43db446680a0942c53f6a0e73c227e27c7e1c8a5aef6219a2"
   license "MIT"
 
   depends_on "git"
@@ -25,8 +25,7 @@ class Polarity < Formula
       Polarity CLI has been installed as 'pt'
       
       To get started:
-        1. Authenticate with Polarity (required for AI features):
-           pt auth login
+        1. Authenticate with Polarity:
            pt auth
            
         2. Create a branch:
