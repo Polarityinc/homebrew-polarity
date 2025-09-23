@@ -1,8 +1,8 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.cc"
-  url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.14/polarity-macos-v0.0.14.tar.gz"
-  sha256 "8a069a598ebfa285ca63c0e0521bbaf80a712947d667871262f345bc8e86d591"
+  url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.21/polarity-macos-v0.0.21.tar.gz"
+  sha256 "0fc917f366a7ae9dec5fe8530a61772b195c70b1edc029b1f0307b73b7e5ebcc"
   license "MIT"
 
   depends_on "git"
