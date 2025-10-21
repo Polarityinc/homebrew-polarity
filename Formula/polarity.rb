@@ -9,16 +9,16 @@ class Polarity < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-darwin-amd64"
-      sha256 "72d280e1e6385f34cda3ce845204eb89671c59a5a0cb43378b49aa76ac8c9e19"
+      sha256 "72cf5d596be4c7d00aa5442c5ff8df14b2065625269356b6411f26627d47448f"
     else
       url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-darwin-arm64"
-      sha256 "e9de6f6344bc0688584d909452278746745290b5f0a2fd6c5075e7df85b40551"
+      sha256 "2fdd9e8df63dad91cf63ede8a93a06b0cd5adb6dbf5f96349ac0871e44a6dd2f"
     end
   end
 
   on_linux do
     url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-linux-amd64"
-    sha256 "38e78894581ef7901d0491f4b24854d3b3db421423d6556111adf89ff89cad2f"
+    sha256 "9909989e07112b83546e43010acbcdad25f0c205ed7fe8f14dfc7c80e6a1636d"
   end
 
   def install
