@@ -1,29 +1,29 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.cc"
-  version "nightly-5-gc2fb684b"
+  version "0.0.3"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-darwin-amd64"
-      sha256 "72cf5d596be4c7d00aa5442c5ff8df14b2065625269356b6411f26627d47448f"
+      url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.3/polarity-darwin-amd64"
+      sha256 "36471dd2e240d8a037a95a4d4448190f053c3f3184ff51975fdb7094c4136c25"
     else
-      url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-darwin-arm64"
-      sha256 "2fdd9e8df63dad91cf63ede8a93a06b0cd5adb6dbf5f96349ac0871e44a6dd2f"
+      url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.3/polarity-darwin-arm64"
+      sha256 "7d65bb3860f2bb7616c66c53800dd30ac1453a31ebc0740b92b7008f18df7c57"
     end
   end
 
   on_linux do
-    url "https://raw.githubusercontent.com/Polarityinc/polarity-binaries/main/paragon-linux-amd64"
-    sha256 "9909989e07112b83546e43010acbcdad25f0c205ed7fe8f14dfc7c80e6a1636d"
+    url "https://github.com/Polarityinc/polarity-binaries/releases/download/v0.0.3/polarity-linux-amd64"
+    sha256 "6b1ebbfcdca1b49a22a378b95dd30de770d6303c00a5453e181feeef88be653e"
   end
 
   def install
     # Install the binary as 'paragon' and create 'pt' symlink
-    bin.install Dir["paragon-*"].first => "paragon"
+    bin.install Dir["polarity-*"].first => "paragon"
     bin.install_symlink "paragon" => "pt"
     
     # Make sure binary is executable
