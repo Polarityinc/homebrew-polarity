@@ -9,16 +9,16 @@ class Polarity < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.4/polarity-darwin-amd64"
-      sha256 "316547a20e94eaf5ca540a5875f375b51af5f2bdb40dc93bdb2a838c6f636188"
+      sha256 "b8d8f6e990365780e9e01a57b352fca1f2e1189a1062745f8cab3307580c9da3"
     else
       url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.4/polarity-darwin-arm64"
-      sha256 "97641deec90053d7d85de140f95ef3771cada3852ee2a5b4fb636ddc66d8aefd"
+      sha256 "885aa2e7d17f89d8e42276d56012a0226141d9d30e1f2f4ded78a560b074e42c"
     end
   end
 
   on_linux do
     url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.4/polarity-linux-amd64"
-    sha256 "d8fd19be290f639c5036377a9aae11bbb0e36a38f357573485179bb3abba3ada"
+    sha256 "84bdd2c8bc8887a59843c6ba32d8b9edb0ca0d4cedb1a977aef1aefacdd517c8"
   end
 
   def install
