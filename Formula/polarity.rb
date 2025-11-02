@@ -1,24 +1,24 @@
 class Polarity < Formula
   desc "CLI tool for managing stacked pull requests with AI-powered features"
   homepage "https://polarity.cc"
-  version "0.0.4"
+  version "0.0.6"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.5/polarity-darwin-amd64"
-      sha256 "b8d8f6e990365780e9e01a57b352fca1f2e1189a1062745f8cab3307580c9da3"
+      url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.6/polarity-darwin-amd64"
+      sha256 "6e3fcc6e5cb9bf9e9a58ff6c3b586c26c50f7e12af792f7d61a4e6c9d4cef786"
     else
-      url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.5/polarity-darwin-arm64"
-      sha256 "885aa2e7d17f89d8e42276d56012a0226141d9d30e1f2f4ded78a560b074e42c"
+      url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.6/polarity-darwin-arm64"
+      sha256 "5042d70e0622724e399202a65fd4fb0e9a573d5759f631a1d4dd1daadcac7ca1"
     end
   end
 
   on_linux do
-    url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.5/polarity-linux-amd64"
-    sha256 "84bdd2c8bc8887a59843c6ba32d8b9edb0ca0d4cedb1a977aef1aefacdd517c8"
+    url "https://github.com/Polarityinc/polarity-binaries/releases/download/0.0.6/polarity-linux-amd64"
+    sha256 "c7b9c46c4fbf5dbcfc562b121dc96860f22acf31ef856f68f1a39c24f8e3036d"
   end
 
   def install
